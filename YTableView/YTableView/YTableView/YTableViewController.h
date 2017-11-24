@@ -11,7 +11,7 @@
 
 @interface YTableViewController : UIViewController
 
-@property (nonatomic, strong) YTableView *taYbleView;
+@property (nonatomic, strong) YTableView *tableView;
 @property (nonatomic, strong) YTableSection *splitSection;
 
 /**
