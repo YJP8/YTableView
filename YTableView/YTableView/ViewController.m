@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "YTableViewCell.h"
 
-#define kTableViewCell @"tableViewCell"
+#define kTableViewCell @"TableViewCell"
+#define kYTableViewCell @"YTableViewCell"
 
 @interface ViewController ()
 
@@ -27,12 +29,12 @@
 
 
 - (void)registerTableViewCell {
-//    UINib *nib = [UINib nibWithNibName:kTableViewCell bundle:nil];
-//    [self.tableView registerNib:nib forCellReuseIdentifier:kTableViewCell];
+    UINib *nib = [UINib nibWithNibName:kYTableViewCell bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:kYTableViewCell];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCell];
 }
 
-#pragma mark FundDetailBody
+#pragma mark TableViewCell
 
 - (UITableViewCell *)cellForCell:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kTableViewCell forIndexPath:indexPath];
@@ -48,6 +50,29 @@
     return @(_dataArray.count);
 }
 
+#pragma mark Split
+
+- (UITableViewCell *)cellForSplit:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self cellForSeperator];
+    cell.contentView.backgroundColor = [UIColor cyanColor];
+    return cell;
+}
+
+- (NSNumber *)heightCellForSplit:(NSIndexPath *)indexPath {
+    return @10;
+}
+
+#pragma mark YTableViewCell
+
+- (UITableViewCell *)cellForYCell:(NSIndexPath *)indexPath {
+    YTableViewCell *cell = [self.tableView  dequeueReusableCellWithIdentifier:kYTableViewCell forIndexPath:indexPath];
+    return cell;
+}
+
+-  (NSNumber *)heightForYCell:(NSIndexPath *)indexPath {
+    return  @50;
+}
+
 - (NSMutableArray *)customSections {
     if (_sections == nil) {
         _sections = [NSMutableArray array];
@@ -56,6 +81,16 @@
         sec.cellForRowAtIndexSelector = @selector(cellForCell:);
         sec.heightForCellSelector = @selector(heightForCell:);
         sec.numberOfRowsSelector = @selector(numberOfRowsForCell:);
+        [_sections addObject:sec];
+        
+        sec = [YTableSection createWithTarget:self];
+        sec.cellForRowAtIndexSelector = @selector(cellForSplit:);
+        sec.heightForCellSelector = @selector(heightCellForSplit:);
+        [_sections addObject:sec];
+        
+        sec = [YTableSection createWithTarget:self];
+        sec.cellForRowAtIndexSelector  = @selector(cellForYCell:);
+        sec.heightForCellSelector = @selector(heightForYCell:);
         [_sections addObject:sec];
     }
     return _sections;

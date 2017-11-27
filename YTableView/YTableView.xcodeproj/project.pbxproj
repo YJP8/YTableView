@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A6AD0591FCC638F00FCEA1F /* YTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6AD0571FCC638F00FCEA1F /* YTableViewCell.m */; };
+		9A6AD05A1FCC638F00FCEA1F /* YTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A6AD0581FCC638F00FCEA1F /* YTableViewCell.xib */; };
 		9A7567B81FC5BB5700B99060 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7567B71FC5BB5700B99060 /* AppDelegate.m */; };
 		9A7567BB1FC5BB5700B99060 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7567BA1FC5BB5700B99060 /* ViewController.m */; };
 		9A7567BE1FC5BB5700B99060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7567BC1FC5BB5700B99060 /* Main.storyboard */; };
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A6AD0561FCC638F00FCEA1F /* YTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTableViewCell.h; sourceTree = "<group>"; };
+		9A6AD0571FCC638F00FCEA1F /* YTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTableViewCell.m; sourceTree = "<group>"; };
+		9A6AD0581FCC638F00FCEA1F /* YTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YTableViewCell.xib; sourceTree = "<group>"; };
 		9A7567B31FC5BB5700B99060 /* YTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7567B61FC5BB5700B99060 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A7567B71FC5BB5700B99060 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +100,9 @@
 				9A7567B71FC5BB5700B99060 /* AppDelegate.m */,
 				9A7567B91FC5BB5700B99060 /* ViewController.h */,
 				9A7567BA1FC5BB5700B99060 /* ViewController.m */,
+				9A6AD0561FCC638F00FCEA1F /* YTableViewCell.h */,
+				9A6AD0571FCC638F00FCEA1F /* YTableViewCell.m */,
+				9A6AD0581FCC638F00FCEA1F /* YTableViewCell.xib */,
 				9A7567BC1FC5BB5700B99060 /* Main.storyboard */,
 				9A7567BF1FC5BB5700B99060 /* Assets.xcassets */,
 				9A7567C11FC5BB5700B99060 /* LaunchScreen.storyboard */,
@@ -211,6 +219,7 @@
 				9A7567C31FC5BB5700B99060 /* LaunchScreen.storyboard in Resources */,
 				9A7567C01FC5BB5700B99060 /* Assets.xcassets in Resources */,
 				9A7567BE1FC5BB5700B99060 /* Main.storyboard in Resources */,
+				9A6AD05A1FCC638F00FCEA1F /* YTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +240,7 @@
 				9A7567E01FC5BDC100B99060 /* YTableView.m in Sources */,
 				9A7567BB1FC5BB5700B99060 /* ViewController.m in Sources */,
 				9A7567DD1FC5BD5400B99060 /* YTableViewController.m in Sources */,
+				9A6AD0591FCC638F00FCEA1F /* YTableViewCell.m in Sources */,
 				9A7567C61FC5BB5700B99060 /* main.m in Sources */,
 				9A7567E31FC5BF3A00B99060 /* YTableSection.m in Sources */,
 				9A7567B81FC5BB5700B99060 /* AppDelegate.m in Sources */,
