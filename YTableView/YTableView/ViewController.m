@@ -69,6 +69,10 @@
     return cell;
 }
 
+- (NSNumber *)numberOfRowsForYCell:(NSIndexPath *)indexPath {
+    return @(3);
+}
+
 -  (NSNumber *)heightForYCell:(NSIndexPath *)indexPath {
     return  @50;
 }
@@ -91,6 +95,7 @@
         sec = [YTableSection createWithTarget:self];
         sec.cellForRowAtIndexSelector  = @selector(cellForYCell:);
         sec.heightForCellSelector = @selector(heightForYCell:);
+        sec.numberOfRowsSelector = @selector(numberOfRowsForYCell:);
         [_sections addObject:sec];
     }
     return _sections;
